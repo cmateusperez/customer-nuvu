@@ -6,8 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-import cc.nuvu.customer.domain.TransactionDto;
 import cc.nuvu.customer.repository.entity.Transaction;
+import cc.nuvu.customer.service.domain.TransactionDto;
 
 @Mapper
 public interface TransactionMapper {

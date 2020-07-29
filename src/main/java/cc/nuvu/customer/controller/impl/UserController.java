@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import cc.nuvu.customer.controller.IUserController;
@@ -17,6 +18,7 @@ public class UserController implements IUserController {
 	IUserService userService;
 
 	@Override
+	@ResponseBody
 	@PostMapping("/login")
 	public String login(@RequestParam("user") String username, @RequestParam("password") String pwd) {
 		String token = userService.getJWTToken(username, pwd);

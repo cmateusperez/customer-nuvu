@@ -9,7 +9,7 @@ import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.http.HttpStatus;
 
-import cc.nuvu.customer.domain.Response;
+import cc.nuvu.customer.service.domain.Response;
 
 public class Utility {
 
@@ -23,7 +23,7 @@ public class Utility {
 		return Stream.of(wrappedSource.getPropertyDescriptors()).map(FeatureDescriptor::getName)
 				.filter(propertyName -> wrappedSource.getPropertyValue(propertyName) == null).toArray(String[]::new);
 	}
-	
+
 	public static <T> Response<T> buildResponse(T payload) {
 		int statusCode;
 		String statusDesc = null;

@@ -2,7 +2,7 @@ package cc.nuvu.customer.service;
 
 import java.util.List;
 
-import cc.nuvu.customer.domain.CustomerDto1;
+import cc.nuvu.customer.service.domain.CustomerDto1;
 
 public interface ICustomerService {
 

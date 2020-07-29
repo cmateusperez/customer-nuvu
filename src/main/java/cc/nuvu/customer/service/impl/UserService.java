@@ -55,27 +55,14 @@ public class UserService implements IUserService {
 			return false;
 	}
 
-	public static String encrypt(String str) {
+	private String encrypt(String str) {
 		try {
 			Cipher ecipher = Cipher.getInstance("AES");
 			SecretKey key = new SecretKeySpec("1234567891234567".getBytes(), "AES");
 			ecipher.init(Cipher.ENCRYPT_MODE, key);
-			byte[] utf8 = str.getBytes("UTF-8");
+			byte[] utf8 = str.getBytes(Constants.UTF);
 			byte[] enc = ecipher.doFinal(utf8);
 			return Base64.getEncoder().encodeToString(enc);
-		} catch (Exception e) {
-		}
-		return null;
-	}
-
-	public static String decrypt(String str) {
-		try {
-			Cipher dcipher = Cipher.getInstance("AES");
-			SecretKey key = new SecretKeySpec("1234567891234567".getBytes(), "AES");
-			dcipher.init(Cipher.DECRYPT_MODE, key);
-			byte[] dec = Base64.getDecoder().decode(str);
-			byte[] utf8 = dcipher.doFinal(dec);
-			return new String(utf8, "UTF-8");
 		} catch (Exception e) {
 		}
 		return null;

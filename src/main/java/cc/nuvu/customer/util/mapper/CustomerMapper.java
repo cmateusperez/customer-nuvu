@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.mapstruct.Mapper;
 
-import cc.nuvu.customer.domain.CustomerDto1;
 import cc.nuvu.customer.repository.entity.Customer;
+import cc.nuvu.customer.service.domain.CustomerDto1;
 
 @Mapper
 public interface CustomerMapper {

@@ -1,4 +1,4 @@
-package cc.nuvu.customer.domain;
+package cc.nuvu.customer.service.domain;
 
 import java.time.LocalDateTime;
 

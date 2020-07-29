@@ -2,10 +2,9 @@ package cc.nuvu.customer.service;
 
 import java.util.List;
 
-import cc.nuvu.customer.domain.TransactionDto;
+import cc.nuvu.customer.service.domain.TransactionDto;
 
 public interface IOperationManagerService {
-
 
 	List<TransactionDto> report();
 

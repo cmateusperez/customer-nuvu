@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.mapstruct.Mapper;
 
-import cc.nuvu.customer.domain.CreditCardDto;
 import cc.nuvu.customer.repository.entity.CreditCard;
+import cc.nuvu.customer.service.domain.CreditCardDto;
 
 @Mapper
 public interface CreditCardMapper {
